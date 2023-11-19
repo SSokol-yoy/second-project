@@ -131,12 +131,14 @@ _Если нужно передать последний коммит, то вм
 
 ```mermaid
 graph LR;
-  untracked -- "git add" --> staged/ tracked;
-  staged/ tracked  -- "git commit –m ‘what has been changed’"  --> committed/ tracked;
-  staged/ tracked -- "changes" --> modified/tracked;
-  committed/ tracked  -- "changes" --> modified/tracked;
-  modified/tracked -- "git add" --> staged/ tracked;
+  untracked -- 'git add' --> staged;
+  staged  -- 'git commit –m'  --> committed;
+  staged -- 'changes' --> modified;
+  committed  -- 'changes' --> modified;
+  modified -- 'git add' --> staged;
 ```  
+
+
 
 
 
