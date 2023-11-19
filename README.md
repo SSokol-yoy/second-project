@@ -127,6 +127,22 @@ _Команда автоматически подбирает такую дли�
 - Когда делается коммит, Git записывает в **refs/heads/master** папки **HEAD** хеш последнего коммита  
 _Если нужно передать последний коммит, то вместо его хеша можно просто написать слово **HEAD** - Git поймёт, что имеется в виду последний коммит_  
 
+## Статусы файлов в Git  
+
+```mermaid
+graph LR;
+  untracked -- "git add" --> staged/ tracked;
+  staged/ tracked  -- "git commit –m ‘what has been changed’"  --> committed/ tracked;
+  staged/ tracked -- "changes" --> modified/tracked;
+  committed/ tracked  -- "changes" --> modified/tracked;
+  modified/tracked -- "git add" --> staged/ tracked;
+```  
+
+
+
+
+  
+
 
   
 
