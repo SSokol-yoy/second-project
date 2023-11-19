@@ -129,38 +129,14 @@ _Если нужно передать последний коммит, то вм
 
 ## Статусы файлов в Git  
 
-```mermaid
-graph LR;
-  untracked -- 'git add' --> staged;
-  staged  -- 'git commit –m'  --> committed;
-  staged -- 'changes' --> modified;
-  committed  -- 'changes' --> modified;
-  modified -- 'git add' --> staged;
-```  
 
-
-
-
-
-
-  
-
-
-  
-
-
-
-  
-
-
-
-
-
-
- 
-
-
-
-
+```mermaid  
+graph LR;  
+untracked -- 'git add' --> staged;  
+staged -- 'git commit -m' -->commited;  
+staged -- 'changed' --> modified;  
+commited -- 'changes' --> modified;  
+modified -- 'git add' --> staged  
+```
 
 
